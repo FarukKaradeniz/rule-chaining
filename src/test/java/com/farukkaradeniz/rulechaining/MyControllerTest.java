@@ -22,6 +22,7 @@ public class MyControllerTest {
     @SneakyThrows
     @ParameterizedTest
     @CsvSource({
+            "ömer,karadeniz,26,true",
             "ömer,karadeniz,16,true",
             "ömer,karadeniz,66,true",
             "ömer,,26,true",
