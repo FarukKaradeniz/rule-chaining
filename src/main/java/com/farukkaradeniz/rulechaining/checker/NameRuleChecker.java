@@ -12,7 +12,7 @@ public class NameRuleChecker implements RuleChecker {
     }
 
     @Override
-    public void process(Person person) {
+    public void check(Person person) {
         if (!StringUtils.hasText(person.name())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "İsim boş olamaz");
         }

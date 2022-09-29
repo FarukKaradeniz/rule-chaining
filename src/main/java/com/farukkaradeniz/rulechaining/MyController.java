@@ -16,12 +16,12 @@ public class MyController {
 
         RuleChecker ruleChecker = new NameRuleChecker();
         while (ruleChecker.nextRule() != null) {
-            ruleChecker.process(person);
+            ruleChecker.check(person);
             ruleChecker = ruleChecker.nextRule();
         }
 
         if (ruleChecker.nextRule() == null) {
-            ruleChecker.process(person);
+            ruleChecker.check(person);
         }
 
         return ResponseEntity.ok(new PersonOutput("SUCCESS"));

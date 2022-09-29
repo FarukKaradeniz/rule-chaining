@@ -12,7 +12,7 @@ public class SurnameRuleChecker implements RuleChecker {
     }
 
     @Override
-    public void process(Person person) {
+    public void check(Person person) {
         if (!StringUtils.hasText(person.surname())) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Soyisim boş olamaz");
         }

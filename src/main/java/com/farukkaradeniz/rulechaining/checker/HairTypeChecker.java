@@ -11,7 +11,7 @@ public class HairTypeChecker implements RuleChecker {
     }
 
     @Override
-    public void process(Person person) {
+    public void check(Person person) {
         if (person.bold()) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Keller giremez");
         }

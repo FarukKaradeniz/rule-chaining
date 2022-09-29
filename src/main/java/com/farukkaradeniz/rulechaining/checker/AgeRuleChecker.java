@@ -11,7 +11,7 @@ public class AgeRuleChecker implements RuleChecker {
     }
 
     @Override
-    public void process(Person person) {
+    public void check(Person person) {
         if (person.age() < 20) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "20 yaşından küçükler giremez");
         }
